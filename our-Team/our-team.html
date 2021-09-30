@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/065af4b497.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Our Team</h1>
+    <div class="container">
+        <div class="card">
+            <img id="fotoProfil" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="foto">
+            <h3 class="subjudul">Aditya Galih</h5>
+            <h3 class="subjudul">BackEnd Developer</h5>
+            <p class="bio">Halo Nama Saya Aditya Galih, Institut Teknologi Sepuluh Nopember, Kelompok 24. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, numquam ea perspiciatis officiis corporis mollitia molestiae rerum earum? Fugiat dolorem numquam in accusantium suscipit hic quo unde tempore eos est?</p>
+        </div>
+        <div class="card">
+            <img id="fotoProfil" src="https://i.pinimg.com/474x/c0/fc/f1/c0fcf164efd9a75a5f7d8065d4365451.jpg" alt="foto">
+            <h3 class="subjudul">Ghina Faraja</h5>
+            <h3 class="subjudul">UI UX designerr</h5>
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio animi rem laudantium fugiat, beatae nesciunt commodi doloribus suscipit sint pariatur perspiciatis eaque impedit nihil quos veniam? Corrupti, cupiditate molestiae? </p>
+        </div>
+        <div class="card">
+            <img id="fotoProfil" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="foto">
+            <h3 class="subjudul">Fikri Al Ichsan</h5>
+            <h3 class="subjudul">Front End Developer</h5>
+            <p class="bio">Halo Nama Saya Fikri Al Ichsan asal balikpapan, Institut Teknologi Kalimantan, Kelompok 24. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, numquam ea perspiciatis officiis corporis mollitia molestiae rerum earum? Fugiat dolorem numquam in accusantium suscipit hic quo unde tempore eos est?</p>
+        </div>
+        <div class="card">
+            <img id="fotoProfil" src="https://i.pinimg.com/474x/c0/fc/f1/c0fcf164efd9a75a5f7d8065d4365451.jpg" alt="foto">
+            <h3 class="subjudul">Jesslyn J.</h5>
+            <h3 class="subjudul">UI UX designerr</h5>
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio animi rem laudantium fugiat, beatae nesciunt commodi doloribus suscipit sint pariatur perspiciatis eaque impedit nihil quos veniam? Corrupti, cupiditate molestiae?</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right" ></i>
+        </div>
+    </div>
+    
+    <script>
+            const card = document.getElementsByClassName('card')
+            const icon = document.getElementsByClassName('fas')
+            let index = 0
+            for (let i = 1; i<card.length; i++){
+                card[i].style.display='none'
+            }
+            icon[0].addEventListener('click',function(){
+                if (index == 0){
+                    index = 3
+                    card[0].style.display = 'none'
+                    card[3].style.display = 'flex'
+                }else if(index== 1){
+                    index = 0
+                    card[1].style.display = 'none'
+                    card[0].style.display = 'flex'
+                }else if(index== 2){
+                    index = 1
+                    card[2].style.display = 'none'
+                    card[1].style.display = 'flex'
+                }else if(index== 3){
+                    index = 2
+                    card[3].style.display = 'none'
+                    card[2].style.display = 'flex'
+                }
+            })
+            icon[1].addEventListener('click',function(){
+                if (index == 0){
+                    index = 1
+                    card[0].style.display = 'none'
+                    card[1].style.display = 'flex'
+                }else if(index== 1){
+                    index = 2
+                    card[1].style.display = 'none'
+                    card[2].style.display = 'flex'
+                }else if(index== 2){
+                    index = 3
+                    card[2].style.display = 'none'
+                    card[3].style.display = 'flex'
+                }else if(index== 3){
+                    index = 0
+                    card[3].style.display = 'none'
+                    card[0].style.display = 'flex'
+                }
+            })
+    </script>
+</body>
+</html>
